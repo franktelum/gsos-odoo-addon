@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+   <data>
+
+      <record id="gsos_complaint_view_tree" model="ir.ui.view">
+         <field name="name">gsos.complaint.tree</field>
+         <field name="model">gsos.complaint</field>
+         <field name="help" type="html">
+             <p>
+                 Click to create a new complaint.
+             </p>
+             <p>
+                Manage partner complaints to better classify them for tracking and analysis purposes. A partner may have several categories and categories have a hierarchical structure: a partner with a categorie has also the parent categorie.
+             </p>
+         </field>
+         <field name="arch" type="xml">
+            <tree string="Complaints">
+               <field name="name" string="Code" />
+               <field name="supplier_id" />
+               <field name="monitor" />
+               <field name="severity_id" />
+               <field name="state" />
+            </tree>
+         </field>
+      </record>
+
+   </data>
+</openerp>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+   <data>
+
+      <record id="gsos_report_template_view_form" model="ir.ui.view">
+         <field name="name">gsos.report.template.form</field>
+         <field name="model">gsos.report.template</field>
+         <field name="arch" type="xml">
+            <form string="Report Template">
+               <sheet>
+                  <group>
+                     <field name="name" />
+                     <field name="file_url" />
+                     <field name="type" />
+                  </group>
+               </sheet>
+            </form>
+         </field>
+      </record>
+
+   </data>
+</openerp>

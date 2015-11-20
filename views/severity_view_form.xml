@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+   <data>
+
+      <record id="gsos_complaint_severity_view_form" model="ir.ui.view">
+         <field name="name">gsos.complaint.severity.form</field>
+         <field name="model">gsos.complaint.severity</field>
+         <field name="arch" type="xml">
+            <form string="Severity">
+               <sheet>
+                  <group>
+                     <field name="name" />
+                  </group>
+               </sheet>
+            </form>
+         </field>
+      </record>
+
+   </data>
+</openerp>

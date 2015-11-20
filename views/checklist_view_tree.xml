@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+   <data>
+
+      <record id="gsos_checklist_view_tree" model="ir.ui.view">
+         <field name="name">gsos.checklist.tree</field>
+         <field name="model">gsos.checklist</field>
+         <field name="help" type="html">
+             <p>
+                 Click to create a new checklist.
+             </p>
+         </field>
+         <field name="arch" type="xml">
+            <tree string="Checklists">
+               <field name="name" />
+               <field name="checklist_template_url" string="Checklist" widget="url" />
+               <field name="create_date" />
+            </tree>
+         </field>
+      </record>
+
+   </data>
+</openerp>

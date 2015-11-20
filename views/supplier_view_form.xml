@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+   <data>
+
+      <record id="gsos_supplier_view_form" model="ir.ui.view">
+         <field name="name">gsos.supplier.form</field>
+         <field name="model">gsos.supplier</field>
+         <field name="arch" type="xml">
+            <form string="Supplier">
+               <sheet>
+                  <div class="oe_button_box" name="button_box" groups="base.group_user">
+                     <button  class="oe_stat_button" name="gsos_audit_action"  type="action" icon="fa-files-o">
+                         <field string="Audits" name="audits_count" widget="statinfo"/>
+                     </button>
+                     <button  class="oe_stat_button" name="gsos_complaint_action"  type="action" icon="fa-exclamation-circle">
+                         <field string="Complaints" name="complaints_count" widget="statinfo"/>
+                     </button>
+                  </div>
+                  <group>
+                       <field name="partner_id" string="Contact" />
+                  </group>
+               </sheet>
+            </form>
+         </field>
+      </record>
+
+   </data>
+</openerp>

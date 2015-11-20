@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+   <data>
+
+      <record id="gsos_audit_view_graph" model="ir.ui.view">
+         <field name="name">gsos.audit.graph</field>
+         <field name="model">gsos.audit</field>
+         <field name="arch" type="xml">
+            <graph type="bar" stacked="False">
+               <field name="supplier_id" type="row" />
+               <field name="checklist_id" type="row" />
+            </graph>
+         </field>
+      </record>
+
+   </data>
+</openerp>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+   <data>
+      <act_window id="gsos_checklist_action"
+         name="Checklists"
+         res_model="gsos.checklist"
+         view_mode="tree,form">
+      </act_window>
+
+      <act_window id="gsos_audit_action"
+         name="Audits"
+         res_model="gsos.audit"
+         view_mode="tree,form,calendar,graph">
+      </act_window>
+
+      <act_window id="gsos_complaint_action"
+         name="Complaints"
+         res_model="gsos.complaint"
+         view_mode="tree,form,graph">
+      </act_window>
+
+      <act_window id="gsos_severity_action"
+         name="Severities"
+         res_model="gsos.complaint.severity"
+         view_mode="tree,form">
+      </act_window>
+
+      <act_window id="gsos_supplier_action"
+         name="Suppliers"
+         res_model="gsos.supplier"
+         view_mode="tree,form">
+      </act_window>
+
+      <act_window id="gsos_business_sector_action"
+         name="Industries"
+         res_model="gsos.business.sector"
+         view_mode="tree,form">
+      </act_window>
+
+      <act_window id="gsos_report_action"
+         name="Reports"
+         res_model="gsos.report.template"
+         view_mode="tree,form">
+      </act_window>
+
+      <menuitem id="gsos_menu"
+         name="Gsos"
+         sequence="20">
+      </menuitem>
+
+      <menuitem id="gsos_audit_menu"
+         name="General"
+         parent="gsos_menu"
+         sequence="1">
+      </menuitem>
+
+      <menuitem id="gsos_audit_checklist_menu"
+         name="Checklists"
+         parent="gsos_audit_menu"
+         action="gsos_checklist_action"
+         sequence="1">
+      </menuitem>
+
+      <menuitem id="gsos_audit_audit_menu"
+         name="Audits"
+         parent="gsos_audit_menu"
+         action="gsos_audit_action"
+         sequence="2">
+      </menuitem>
+
+      <menuitem id="gsos_audit_complaint_menu"
+         name="Complaints"
+         parent="gsos_audit_menu"
+         action="gsos_complaint_action"
+         sequence="3">
+      </menuitem>
+
+      <menuitem id="gsos_audit_supplier_menu"
+         name="Suppliers"
+         parent="gsos_audit_menu"
+         action="gsos_supplier_action"
+         sequence="4">
+      </menuitem>
+
+      <menuitem id="gsos_audit_report_menu"
+         name="Reports"
+         parent="gsos_audit_menu"
+         action="gsos_report_action"
+         sequence="5">
+      </menuitem>
+
+      <menuitem id="gsos_config_menu"
+         name="Configuration"
+         parent="gsos_menu"
+         sequence="2">
+      </menuitem>
+
+      <menuitem id="gsos_config_general_menu"
+         name="General"
+         parent="gsos_config_menu"
+         sequence="1">
+      </menuitem>
+
+      <menuitem id="gsos_config_business_sector_menu"
+         name="Industries"
+         parent="gsos_config_menu"
+         action="gsos_business_sector_action"
+         sequence="3">
+      </menuitem>
+
+   </data>
+</openerp>

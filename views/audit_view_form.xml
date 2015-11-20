@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+   <data>
+
+      <record id="gsos_audit_view_form" model="ir.ui.view">
+         <field name="name">gsos.audit.form</field>
+         <field name="model">gsos.audit</field>
+         <field name="arch" type="xml">
+            <form string="Audit">
+               <header>
+                  <button name="action_audit_send" string="Request Audit" type="object" states="draft" class="btn-primary"/>
+                  <field name="state" widget="statusbar" />
+               </header>
+               <sheet>
+                  <div class="oe_title">
+                     <h1>
+                        <field name="name" readonly="1"/>
+                     </h1>
+                  </div>
+                  <p>Para iniciar un proceso de auditoría es necesario que seleccione un proveedor, el checklist a aplicar y opcionalmente la fecha tentativa de inicio.</p>
+                  <group>
+                     <field name="supplier_id" />
+                     <field name="checklist_id" />
+                     <field name="date_start" />
+                     <field name="resolution_file_url" attrs="{'invisible': [('state', 'not in', ('done',))]}" widget="url"/>
+                  </group>
+               </sheet>
+               <div class="oe_chatter">
+                  <field name="message_follower_ids" widget="mail_followers"/>
+                  <field name="message_ids" widget="mail_thread"/>
+               </div>
+            </form>
+         </field>
+      </record>
+
+   </data>
+</openerp>
